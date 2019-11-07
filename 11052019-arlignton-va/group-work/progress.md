@@ -7,7 +7,6 @@ This document should link to all work happening at the sprint. Links to PR's and
   - https://github.com/radiantearth/stac-spec/pull/513
   - https://github.com/opengeospatial/ogcapi-features/issues/157
   - needs harmonization
-- [Aligned paging with OAFeat](https://github.com/radiantearth/stac-spec/pull/631) by using next links and adding a POST extension to the links definition for our /search endpoint.
 
 ## Item
 - [Added purpose field to Asset](https://github.com/radiantearth/stac-spec/pull/637) - added field `purpose` as a corollary field to Links `rel`, to describe a common set of usages for specific assets in an item, for example `thumbnail`.  
@@ -48,6 +47,15 @@ This document should link to all work happening at the sprint. Links to PR's and
   * Bug fixes and template enhancements: https://github.com/qgis/QGIS/pull/32596 , https://github.com/qgis/QGIS/pull/32645 , https://github.com/qgis/QGIS/pull/32656 
   * Support for `properties` https://github.com/qgis/QGIS/pull/32655
   * Documentation on `datetime` and `properties`: https://github.com/qgis/QGIS-Documentation/pull/4364
+  
+- GeoServer CQL implementation:
+  * Landing page: http://ows.geo-solutions.it/geoserver/ne/ogc/features
+  * API: http://ows.geo-solutions.it/geoserver/ne/ogc/features/api?f=text%2Fhtml
+  * Queryables WIP: http://ows.geo-solutions.it/geoserver/ne/ogc/features/collections/popplaces50m/queryables?f=json
+  * Filter on Megacities: https://ows.geo-solutions.it/geoserver/ne/ogc/features/collections/popplaces50m/items?limit=50&filter=MEGACITY=1&filter-lang=cql-text
+  * Cities starting with "Bo": https://ows.geo-solutions.it/geoserver/ne/ogc/features/collections/popplaces50m/items?limit=50&filter=NAME%20LIKE%20%27Bo%25%27&filter-lang=cql-text
+  * Cities starting with "Bo" in north america, using a separate BBOX filter: https://ows.geo-solutions.it/geoserver/ne/ogc/features/collections/popplaces50m/items?limit=50&filter=NAME%20LIKE%20%27Bo%25%27&filter-lang=cql-text&bbox=-130,20,-60,60
+  * Sample filter capabilities output (not yet available on the server online): https://gist.github.com/aaime/b6ebe137b2dc318cfd31348c7e1749a3
     
 ## Core
 * [Aligned STAC-specific endpoints more with OAF](https://github.com/radiantearth/stac-spec/pull/632) - also mentioned in a related [OAF issue](https://github.com/opengeospatial/ogcapi-features/issues/154).
